@@ -13,7 +13,7 @@ The project focused on solving the **Inverse Kinematics (IK)** problem to allow 
 
 | **Digital Twin (MATLAB)** | **Physical Experimental Setup** |
 |:-------------------------:|:-----------------------------:|
-| ![Simulation Demo](simulation_demo.gif) | ![Real Robot Hardware](real_robot_setup.png) |
+| ![Simulation Demo](assets/simulation_demo.gif) | ![Real Robot Hardware](assets/real_robot_setup.png) |
 | *Real-time simulation of the IK solver.* | *Validation on the mobile manipulator.* |
 
 ---
@@ -51,7 +51,7 @@ The graph below demonstrates the robot's ability to track a time-varying traject
 
 **Observation:** The perfect overlap between the solid and dashed lines confirms the accuracy of the Inverse Kinematics algorithm and the low latency of the control loop.
 
-![Sinusoidal Tracking Results](sinusoidal_tracking.png)
+![Sinusoidal Tracking Results](assets/sinusoidal_tracking.png)
 
 ---
 
