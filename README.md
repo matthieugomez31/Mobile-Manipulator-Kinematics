@@ -13,7 +13,7 @@ The project focused on solving the **Inverse Kinematics (IK)** problem to allow 
 
 | **Digital Twin (MATLAB)** | **Physical Experimental Setup** |
 |:-------------------------:|:-----------------------------:|
-| ![Simulation Demo](assets/simulation_demo.gif) | ![Real Robot Hardware](assets/real_robot_setup.png) |
+| ![Simulation Demo](assets/simulation_demo.gif) | ![Real Robot Hardware](assets/real_robot_setup.jpg) |
 | *Real-time simulation of the IK solver.* | *Validation on the mobile manipulator.* |
 
 ---
