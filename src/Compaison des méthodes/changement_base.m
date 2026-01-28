@@ -1,0 +1,15 @@
+function [r, th, ph] = changement_base(x, y, z)
+% Effectue un changement de la base cartésienne à la base sphérique
+    r = sqrt(x^2+y^2+z^2);
+    th = asin(z/r);
+    if x == 0
+        if y >= 0
+            ph = pi/2;
+        else
+            ph = -pi/2;
+        end
+    else
+        ph = atan2(y,x);
+    end
+end
+

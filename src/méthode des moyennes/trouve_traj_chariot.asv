@@ -1,0 +1,35 @@
+function traj_chariot = trouve_traj_chariot(traj_point, N)
+    [ligne, colonne] = size(traj_point);
+    mx = 0;%initialise la trajeectoire à 0
+    my = 0;
+    for i = 0:N-1
+        mx = mx + traj_point(ligne-i, 1);%on initalise la moyenne en partant de la fin
+        my = my + traj_point(ligne-i, 2);
+    end
+    mx = mx / N;%on divise par le nombre de point traiter
+    my = my / N;
+    traj_chariot = zeros(ligne, colonne);
+    for i = 0:ligne-N-1
+        traj_chariot(ligne-i, 1) = mx;
+        traj_chariot(ligne-i, 2) = my;
+        traj_chariot(ligne-i, 3) = 0.077;%la hauteur est celle du point ou commence le bras de robot, c'est la hauteur du chariot
+        mx = mx + (traj_point(ligne-(i+N), 1) - traj_point(ligne-i, 1)) / N;%pour trouver la nouvelle moyenne on ajout un point et on en retire un autre
+        my = my + (traj_point(ligne-(i+N), 2) - traj_point(ligne-i, 2)) / N;
+    end
+    for i = ligne-N-1+1:ligne-1
+        traj_chariot(ligne-i, 1) = mx;
+        traj_chariot(ligne-i, 2) = my;
+        traj_chariot(ligne-i, 3) = 0.077;
+        mx=mx-traj_point(ligne-i,1)/N;
+        my=my-traj_point(ligne-i,2)/N;
+    end
+end
+%Pour les tout premiers points le robot ne bouge pas car on a pas assez de
+%point pour faire la moyenne.
+
+
+
+
+
+
+

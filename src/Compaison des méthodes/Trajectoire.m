@@ -1,0 +1,16 @@
+function q = Trajectoire(x_char, y_char, q0, q1, q2, q3)
+% Transforme les consignes pour le robot
+%   on ajoute des vecteurs nuls pour les liaisons fixes du robot 
+%   on décale les coordonnées initiales du robot car les glissières
+%   n'acceptent pas de consigne négative
+q_fixe = 0*x_char;
+
+xmin = min(min(x_char), 0);
+ymin = min(min(y_char), 0);
+
+x_char_positif = x_char - xmin;
+y_char_positif = y_char - ymin;
+
+q = [q_fixe, y_char_positif, q_fixe, x_char_positif, q_fixe, q0, q_fixe, q1, q_fixe, q2, q3];
+end
+
