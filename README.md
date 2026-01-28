@@ -51,7 +51,7 @@ The graph below demonstrates the robot's ability to track a time-varying traject
 
 **Observation:** The perfect overlap between the solid and dashed lines confirms the accuracy of the Inverse Kinematics algorithm and the low latency of the control loop.
 
-![Sinusoidal Tracking Results](assets/sinusoidal_tracking.png)
+![Sinusoidal Tracking Results](assets/sinusoidal_tracking.jpg)
 
 ---
 
